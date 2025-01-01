@@ -1,2 +1,2 @@
 # CPP Solutions
-A collection of all my solutions throughout my problem-solving journey.
+Here are some codes for problems I've solved on Codeforces.
