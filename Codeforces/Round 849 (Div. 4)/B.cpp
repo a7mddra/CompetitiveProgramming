@@ -13,11 +13,11 @@ string solve()
 	for (int i = 0; i < n; i++) {
 		cin >> c;
 		switch (c) {
-        case 'U': y++; break;
-        case 'D': y--; break;
-        case 'R': x++; break;
-        case 'L': x--; break;
-		    default :      break;
+	        case 'U': y++; break;
+	        case 'D': y--; break;
+	        case 'R': x++; break;
+	        case 'L': x--; break;
+		default :      break;
 		} if (x==1&&y==1) ans = "YES";
 	} return ans;
 }
