@@ -19,8 +19,8 @@ void solve()
 	string ans = "YES";
 	for (int i = 0 ; i < n ; i++) {
 	    if(b[i]%2!=a[i]%2) {
-	    ans="NO";
-	    break;
+		    ans="NO";
+		    break;
 	    }
 	}
 	
