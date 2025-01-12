@@ -14,7 +14,7 @@ void solve()
     int rem = (r - l + 1) % a;  
 
     if (rem > 0) {
-        int end = (st + rem - 1) % a;
+        int end = st + rem - 1;
         if (st <= end) {
             if (a - 1 >= st && a - 1 <= end) {
                 cnt++;
@@ -38,7 +38,7 @@ void solve()
     
     max_div = (l+idx) / a;
     
-    cout << max_div + max_mod <<endl;
+    cout << max_div + max_mod << endl;
 }
 
 int main()
