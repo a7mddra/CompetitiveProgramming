@@ -19,7 +19,7 @@ bool check(double input) {
 
 void solve()
 {
-    int m, s, e, min=INT_MAX, max=0, b[51]={0}, cnt=0;
+    int m, s, e, min=INT_MAX, max=0, b[51]={0};
     cin >> m >> s;
     cnt+=s;
     for (int i = 0; i < m; i++) {
