@@ -4,8 +4,8 @@
 #include "bits/stdc++.h"
 using namespace std;
 
-bool check(double input) {
-  double dis = 1 + 4 * input;
+bool check(double m) {
+  double dis = 1 + 4 * m;
 
   if (dis < 0) {
     return false;
@@ -21,11 +21,9 @@ void solve()
 {
     int m, s, e, min=INT_MAX, max=0, b[51]={0};
     cin >> m >> s;
-    cnt+=s;
     for (int i = 0; i < m; i++) {
         cin >> e;
         b[e]++;
-        cnt+=e;
         if(min>e)min=e; 
         if(max<e)max=e;
     }
