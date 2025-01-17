@@ -12,7 +12,6 @@ int solve(int n, int k, vector<int>& arr) {
     }
     
     vector<int> pq;
-
     for (auto& entry : freq) {
         pq.push_back(entry.second);
     } sort(pq.begin(), pq.end());
