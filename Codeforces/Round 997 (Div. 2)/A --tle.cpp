@@ -14,9 +14,7 @@ void solve()
 	    xi+=x;
 	    yi+=y;
 	    for (int j=xi; j<xi+m; j++) {
-	        for (int k=yi; k<yi+m; k++) {
-	            grid[j][k] = 1;
-	        }
+	        for (int k=yi; k<yi+m; k++) grid[j][k] = 1;
 	    }
 	}
 	
