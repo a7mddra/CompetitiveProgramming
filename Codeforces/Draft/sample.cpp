@@ -6,8 +6,10 @@ using namespace std;
 
 void solve()
 {
-    int n,
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
+    vector<int> b(n);
+    for (int& e : b) cin >> e;
     cout <<  << '\n';
 }
 
@@ -16,5 +18,5 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);    
     int t;  cin >> t;
-    while(t--) solve(); return 0;
+    while (t--) solve(); return 0;
 }
