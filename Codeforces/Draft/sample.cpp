@@ -2,14 +2,15 @@
  
 **************************************************/
 #include "bits/stdc++.h"
+#define ll long long
 using namespace std;
 
 void solve()
 {
-    int n, k;
+    ll n, k;
     cin >> n >> k;
-    vector<int> b(n);
-    for (int& e : b) cin >> e;
+    vector<ll> b(n);
+    for (ll& e : b) cin >> e;
     cout <<  << '\n';
 }
 
