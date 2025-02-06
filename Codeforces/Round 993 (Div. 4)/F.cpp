@@ -5,31 +5,40 @@
 #define ll long long
 using namespace std;
 
-void solve()
-{
-    ll n, m, q, x;
+void solve() {
+    ll n, m, q, x, f;
     cin >> n >> m >> q;
     vector<ll> a(n), b(m);
+    unordered_set<ll> A, B;
 
-    for (ll& e : a) cin >> e;
-    for (ll& e : b) cin >> e;
+    for (ll &e : a) cin >> e;
+    for (ll &e : b) cin >> e;
 
-    ll suma = accumulate(a.begin(), a.end(), 0LL);
-    ll sumb = accumulate(b.begin(), b.end(), 0LL);
-    ll sum  = suma * sumb;
-    
-    unordered_set<ll> sums;
-    
-    for (int i=0; i<n; ++i) {
-        for (int j=0; j<m; ++j) {
-            ll si = sum - (sumb * a[i]) - (suma * b[j]) + (a[i] * b[j]);
-            sums.insert(si);
-        }
-    }
+    ll sa = accumulate(a.begin(), a.end(), 0LL);
+    ll sb = accumulate(b.begin(), b.end(), 0LL);
 
-    for (ll i = 0; i < q; ++i) {
+    for (ll x : a) A.insert(x);
+    for (ll x : b) B.insert(x);
+
+    while (q--) {
         cin >> x;
-        cout << (sums.count(x) ? "yEs" : "nO") << '\n';
+        f = 0;
+        
+        for (ll i = 1; i * i <= abs(x); ++i) {
+            if (x % i != 0) continue;
+            ll d = x / i;
+    
+            vector<pair<ll, ll>> pairs = {{i, d}, {d, i}, {-i, -d}, {-d, -i}};
+            for (auto [p, q] : pairs) {
+                if (abs(sa - p) <= n && abs(sb - q) <= m && A.count(sa - p) && B.count(sb - q)) {
+                    f = 1;
+                    break;
+                }
+            }
+            if (f) break;
+        }
+
+        cout << (f ? "YES" : "NO") << '\n';
     }
 }
 
