@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     ll n, m, q, x, f, sa = 0, sb = 0;
     cin >> n >> m >> q;
-    unordered_set<ll> a, b;
+    set<ll> a, b;
 
     for (int i=0; i<n; ++i) {
 		cin >> x;
