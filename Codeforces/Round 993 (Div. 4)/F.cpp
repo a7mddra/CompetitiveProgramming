@@ -6,39 +6,33 @@
 using namespace std;
 
 void solve() {
-    ll n, m, q, x, f;
+    ll n, m, q, x, f, sa = 0, sb = 0;
     cin >> n >> m >> q;
-    vector<ll> a(n), b(m);
-    unordered_set<ll> A, B;
+    unordered_set<ll> a, b;
 
-    for (ll &e : a) cin >> e;
-    for (ll &e : b) cin >> e;
-
-    ll sa = accumulate(a.begin(), a.end(), 0LL);
-    ll sb = accumulate(b.begin(), b.end(), 0LL);
-
-    for (ll x : a) A.insert(x);
-    for (ll x : b) B.insert(x);
-
+    for (int i=0; i<n; ++i) {
+		cin >> x;
+		a.insert(x);
+		sa += x;
+	}
+	for (int i=0; i<m; ++i) {
+		cin >> x;
+		b.insert(x);
+		sb += x;
+	}
     while (q--) {
         cin >> x;
         f = 0;
         
-        for (ll i = 1; i * i <= abs(x); ++i) {
-            if (x % i != 0) continue;
-            ll d = x / i;
-    
-            vector<pair<ll, ll>> pairs = {{i, d}, {d, i}, {-i, -d}, {-d, -i}};
-            for (auto [p, q] : pairs) {
-                if (abs(sa - p) <= n && abs(sb - q) <= m && A.count(sa - p) && B.count(sb - q)) {
-                    f = 1;
-                    break;
-                }
-            }
-            if (f) break;
+        for (ll i = 1; i*i <= abs(x); ++i) {
+            if (x % i) continue;
+            if ((a.count(sa-i)&&b.count(sb-x/i))
+			||  (a.count(sa-x/i)&&b.count(sb-i))
+			||  (a.count(sa+i)&&b.count(sb+x/i))
+			||  (a.count(sa+x/i)&&b.count(sb+i)))
+			f = 1;
         }
-
-        cout << (f ? "YES" : "NO") << '\n';
+        cout << (f?"YES":"NO") << '\n';
     }
 }
 
