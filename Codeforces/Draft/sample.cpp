@@ -9,8 +9,8 @@ void solve()
 {
     ll n, k;
     cin >> n >> k;
-    vector<ll> b(n);
-    for (ll& e : b) cin >> e;
+    vector<ll> a(n);
+    for (ll& e : a) cin >> e;
     cout <<  << '\n';
 }
 
