@@ -20,15 +20,11 @@ void solve()
         if(s[i]=='?'||s[i]=='*') continue;
         else {
             if (i+1<s.size()&&s[i+1]=='*') {
-                if (n>cnt2) {
-                    ll j=i;
-                    while (j<n) {
-                        t+=s[i];
-                        ++j;
-                    }
-                    cout <<t;
-                    return;
-                } else if (n<cnt2) --cnt2;
+                while (n>cnt2) {
+                    t+=s[i];
+                    ++cnt2;
+                }
+                if (n<cnt2) --cnt2;
                 else t+=s[i];
             } else if (i+1<s.size()&&s[i+1]=='?') {
                 if (n<cnt2) --cnt2;
