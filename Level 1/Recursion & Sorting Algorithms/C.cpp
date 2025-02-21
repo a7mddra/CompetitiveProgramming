@@ -9,7 +9,7 @@ void solve()
     string ans="No";
     for (ll i=0; i<n; ++i) {
         cin >> x >> y;
-        if (x>s&&y>d) ans="Yes";
+        if (x<s&&y>d) ans="Yes";
     }
     cout << ans << '\n';
 }
