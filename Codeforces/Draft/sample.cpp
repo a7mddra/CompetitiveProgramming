@@ -5,16 +5,15 @@
 using namespace std;
 using ll = long long;
 string el = "\n";
-#define COMPILE 1
 void ip() {
-#if COMPILE
+#if LOCAL
     freopen("input.txt", "r", stdin);
 #endif 
 }
 
 void solve()
 {
-    
+
 }
 
 int main()
