@@ -1,23 +1,27 @@
-/*************************************************
- 
-**************************************************/
+/*
+ *  Author: A7mddra
+ */
 #include "bits/stdc++.h"
-#define ll long long
 using namespace std;
+using ll = long long;
+string el = "\n";
+#define COMPILE 1
+void ip() {
+#if COMPILE
+    freopen("input.txt", "r", stdin);
+#endif 
+}
 
 void solve()
 {
-    ll n, k;
-    cin >> n >> k;
-    vector<ll> a(n);
-    for (ll& e : a) cin >> e;
-    cout <<  << '\n';
+    
 }
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);    
-    ll t;  cin >> t;
-    while (t--) solve(); return 0;
+    ios::sync_with_stdio(0);
+    cin.tie(0); ip();
+    ll T = 1; cin >> T;
+    while (T--) solve();
+    return 0;
 }
