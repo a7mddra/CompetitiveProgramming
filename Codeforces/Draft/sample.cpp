@@ -1,5 +1,5 @@
 /*
- *  Author: A7mddra
+ *  Author: a7mddra
  */
 #include "bits/stdc++.h"
 using namespace std;
