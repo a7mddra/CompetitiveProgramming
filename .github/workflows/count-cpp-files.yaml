@@ -3,9 +3,9 @@ name: Count .cpp Files
 on:
   push:
     branches:
-      - main  # or the branch you want to track
+      - main  
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
+    - cron: '0 0 * * *'  
 
 jobs:
   count-cpp-files:
