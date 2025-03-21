@@ -23,7 +23,7 @@ jobs:
 
     - name: Create badge
       run: |
-        echo "{\"schemaVersion\": 1, \"label\": \"Overall Solved\", \"message\": \"$count\", \"color\": \"blue\"}" > badge.json
+        echo "{\"schemaVersion\": 1, \"label\": \"Overall Solved\", \"message\": \"+$count\", \"color\": \"blue\"}" > badge.json
 
     - name: Check for changes
       id: check-changes
