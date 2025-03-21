@@ -4,5 +4,4 @@
 
 ---
 
-### [Codeforces Progress](https://codeforces.com/profile/a7mddra)
-🔹 **Contest Rating:** `1535` *(Max: Specialist, `1546`)*  
+
