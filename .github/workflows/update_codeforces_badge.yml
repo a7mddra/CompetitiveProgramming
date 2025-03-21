@@ -24,21 +24,13 @@ jobs:
         pip install requests beautifulsoup4
 
     - name: Scrape Codeforces data
-      id: scrape
       run: |
-        python scrape_codeforces.py > output.txt
-        echo "current_rating=$(grep 'Current Rating:' output.txt | cut -d ' ' -f 3)" >> $GITHUB_ENV
-        echo "max_rating=$(grep 'Max Rating:' output.txt | cut -d ' ' -f 3)" >> $GITHUB_ENV
-        echo "rank=$(grep 'Rank:' output.txt | cut -d ' ' -f 2)" >> $GITHUB_ENV
-
-    - name: Update README
-      run: |
-        sed -i '/### \[Codeforces Progress\]/,/###/ {/### \[Codeforces Progress\]/ {n; /🔹/!b; N; s/🔹.*/🔹 **Contest Rating:** `'"$current_rating"'` *(Max: '"$rank"', `'"$max_rating"'`)*/}}' README.md
+        python scrape_codeforces.py
 
     - name: Commit and push changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add README.md
-        git commit -m "Update Codeforces badge"
+        git add codeforces_data.json
+        git commit -m "Update Codeforces data"
         git push
