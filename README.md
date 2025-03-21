@@ -1,6 +1,6 @@
 ### My Random Competitive Programming Solutions (and Other Stuff) 
 
-[![Solved Problems](https://img.shields.io/badge/Overall%20Solved-%2B199-blue?style=for-the-badge&logo=codeforces)](https://codeforces.com/profile/a7mddra)
+![Overall Solved](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/a7mddra/CompetitiveProgramming/main/badge.json&query=$.message&label=Overall%20Solved&color=blue&style=for-the-badge&logo=codeforces)
 
 ---
 
